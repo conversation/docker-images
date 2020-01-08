@@ -3,19 +3,20 @@
 all: base ruby node sfdx
 
 base:
-	cd base; docker build -t base .
+	pwd
+	cd ./base; docker build -t base .
 	docker tag base theconversation/base:latest
 
 node:
-	cd node; docker build -t node .
+	cd ./node; docker build -t node .
 	docker tag node theconversation/node:latest
 
 ruby:
-	cd ruby; docker build -t ruby .
+	cd ./ruby; docker build -t ruby .
 	docker tag ruby theconversation/ruby:latest
 
 sfdx:
-	cd sfdx; docker build -t sfdx .
+	cd ./sfdx; docker build -t sfdx .
 	docker tag sfdx theconversation/sfdx:latest
 
 push:
