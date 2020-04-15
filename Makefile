@@ -1,6 +1,6 @@
-.PHONY: all base node ruby sfdx
+.PHONY: all base node ruby ruby-ubuntu sfdx
 
-all: base ruby node sfdx
+all: base ruby ruby-ubuntu node sfdx
 
 base:
 	pwd
@@ -18,6 +18,11 @@ ruby:
 	docker tag ruby theconversation/ruby:latest
 	docker tag ruby theconversation/ruby:alpine3.11
 
+ruby-ubuntu:
+	cd $@; docker build -t $@ .
+	docker tag $@ theconversation/ruby:latest-ubuntu-xenial
+	docker tag $@ theconversation/ruby:2.4-ubuntu-xenial
+
 sfdx:
 	cd ./sfdx; docker build -t sfdx .
 	docker tag sfdx theconversation/sfdx:latest
@@ -30,6 +35,8 @@ push:
 	docker push theconversation/node:alpine3.11
 	docker push theconversation/ruby:latest
 	docker push theconversation/ruby:alpine3.11
+	docker push theconversation/ruby:latest-ubuntu-xenial
+	docker push theconversation/ruby:2.4-ubuntu-xenial
 	docker push theconversation/sfdx:latest
 	docker push theconversation/sfdx:alpine3.11
 
