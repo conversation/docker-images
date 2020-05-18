@@ -13,7 +13,7 @@ RUN apt-get update \
         git \
         zlib1g-dev \
         libxml2-dev libxslt-dev \
-        ruby2.4 ruby2.4-dev \
+        ruby2.6 ruby2.6-dev \
         tzdata \
         locales \
       && locale-gen en_AU.UTF-8 \
