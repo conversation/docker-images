@@ -22,7 +22,7 @@ RUN apt-get update \
 ENV LANG=en_AU.UTF-8 \
     LC_ALL=en_AU.UTF-8
 
-RUN gem install bundler --version "1.17.3" \
+RUN gem install bundler --version "2.1.4" \
       && echo "install: --no-rdoc --no-ri" > /etc/gemrc
 
 RUN bundle config build.nokogiri --use-system-libraries
