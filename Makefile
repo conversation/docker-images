@@ -6,7 +6,7 @@ base:
 	pwd
 	cd ./base; docker build -t base .
 	docker tag base theconversation/base:latest
-	docker tag base theconversation/base:alpine3.11
+	docker tag base theconversation/base:alpine3.12
 
 node:
 	cd ./node; docker build -t node .
@@ -30,7 +30,7 @@ sfdx:
 
 push:
 	docker push theconversation/base:latest
-	docker push theconversation/base:alpine3.11
+	docker push theconversation/base:alpine3.12
 	docker push theconversation/node:latest
 	docker push theconversation/node:alpine3.11
 	docker push theconversation/ruby:latest
