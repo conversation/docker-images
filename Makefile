@@ -11,7 +11,7 @@ base:
 node:
 	cd ./node; docker build -t node .
 	docker tag node theconversation/node:latest
-	docker tag node theconversation/node:alpine3.11
+	docker tag node theconversation/node:12.17.0
 
 ruby:
 	cd ./ruby; docker build -t ruby .
@@ -32,7 +32,7 @@ push:
 	docker push theconversation/base:latest
 	docker push theconversation/base:alpine3.12
 	docker push theconversation/node:latest
-	docker push theconversation/node:alpine3.11
+	docker push theconversation/node:12.17.0
 	docker push theconversation/ruby:latest
 	docker push theconversation/ruby:alpine3.11
 	docker push theconversation/ruby:latest-ubuntu-xenial
