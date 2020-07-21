@@ -1,4 +1,4 @@
-FROM theconversation/base:alpine3.11
+FROM theconversation/base:alpine3.12
 
 # Install node.
-RUN apk --no-cache add npm nodejs
+RUN apk --no-cache add npm nodejs=12.17.0-r0
