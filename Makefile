@@ -21,7 +21,7 @@ ruby:
 ruby-ubuntu:
 	cd $@; docker build -t $@ .
 	docker tag $@ theconversation/ruby:latest-ubuntu-xenial
-	docker tag $@ theconversation/ruby:2.6-ubuntu-xenial-20200714
+	docker tag $@ theconversation/ruby:2.7-ubuntu-xenial-20200714
 
 sfdx:
 	cd ./sfdx; docker build -t sfdx .
