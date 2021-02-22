@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3.13.0
 
 # Install core packages.
 RUN apk --no-cache add curl git jq libbz2 libpq libxml2 zlib
